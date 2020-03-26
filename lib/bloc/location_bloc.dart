@@ -27,6 +27,12 @@ class LocationBloc extends Bloc<LocationEvent, LocationState> {
     if (event is LocationAdded) {
       yield* _mapTrackingToState(currentState, event);
     }
+    if (event is Paused) {
+      yield* _mapPauseToState(currentState, event);
+    }
+    if (event is Resumed) {
+      yield* _mapResumeToState(currentState, event);
+    }
     if (event is Reset) {
       yield* _mapResetToState();
     }
@@ -58,6 +64,22 @@ class LocationBloc extends Bloc<LocationEvent, LocationState> {
         add(LocationAdded(position: position));
       }
     });
+  }
+
+  Stream<LocationState> _mapPauseToState(
+      LocationState currentState, Paused event) async* {
+    if (currentState is LocationTrackingInProgress) {
+      _positionSubscription?.pause();
+      yield LocationTrackingPaused(positions: currentState.positions);
+    }
+  }
+
+  Stream<LocationState> _mapResumeToState(
+      LocationState currentState, Resumed resume) async* {
+    if (currentState is LocationTrackingPaused) {
+      _positionSubscription?.resume();
+      yield LocationTrackingInProgress(positions: currentState.positions);
+    }
   }
 
   @override

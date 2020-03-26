@@ -18,3 +18,12 @@ class LocationTrackingInProgress extends LocationState {
   @override
   List<Object> get props => [positions];
 }
+
+class LocationTrackingPaused extends LocationState {
+  final List<Position> positions;
+
+  const LocationTrackingPaused({this.positions});
+
+  @override
+  List<Object> get props => [positions];
+}

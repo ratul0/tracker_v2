@@ -18,4 +18,8 @@ class LocationAdded extends LocationEvent {
   List<Object> get props => [position];
 }
 
+class Paused extends LocationEvent {}
+
+class Resumed extends LocationEvent {}
+
 class Reset extends LocationEvent {}
