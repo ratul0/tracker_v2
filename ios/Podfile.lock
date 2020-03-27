@@ -1,4 +1,6 @@
 PODS:
+  - all_sensors (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - geolocator (5.3.0):
     - Flutter
@@ -6,17 +8,23 @@ PODS:
     - Flutter
   - location_permissions (2.0.5):
     - Flutter
-  - proximity_plugin (0.0.1):
+  - screen (0.0.1):
+    - Flutter
+  - vibration (1.2.4):
     - Flutter
 
 DEPENDENCIES:
+  - all_sensors (from `.symlinks/plugins/all_sensors/ios`)
   - Flutter (from `Flutter`)
   - geolocator (from `.symlinks/plugins/geolocator/ios`)
   - google_api_availability (from `.symlinks/plugins/google_api_availability/ios`)
   - location_permissions (from `.symlinks/plugins/location_permissions/ios`)
-  - proximity_plugin (from `.symlinks/plugins/proximity_plugin/ios`)
+  - screen (from `.symlinks/plugins/screen/ios`)
+  - vibration (from `.symlinks/plugins/vibration/ios`)
 
 EXTERNAL SOURCES:
+  all_sensors:
+    :path: ".symlinks/plugins/all_sensors/ios"
   Flutter:
     :path: Flutter
   geolocator:
@@ -25,15 +33,19 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/google_api_availability/ios"
   location_permissions:
     :path: ".symlinks/plugins/location_permissions/ios"
-  proximity_plugin:
-    :path: ".symlinks/plugins/proximity_plugin/ios"
+  screen:
+    :path: ".symlinks/plugins/screen/ios"
+  vibration:
+    :path: ".symlinks/plugins/vibration/ios"
 
 SPEC CHECKSUMS:
+  all_sensors: 13f46502204bebbd1e06b65ff3d7cdaa03d88b26
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   geolocator: 7cdcf71180b80913b3cd84ab715d3b5365b378af
   google_api_availability: 526574c9a5a0ae541e18c65f98e47afc11f53c8b
   location_permissions: 4a49d4e5bec5b653643e551ab77963cc99bb0e4a
-  proximity_plugin: 785406458c163e978e45676c383caafc8fb01fde
+  screen: abd91ca7bf3426e1cc3646d27e9b2358d6bf07b0
+  vibration: f0c5bb486671fb81e973bfb451d89f8efd07c9c9
 
 PODFILE CHECKSUM: c34e2287a9ccaa606aeceab922830efb9a6ff69a
 

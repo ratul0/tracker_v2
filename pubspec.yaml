@@ -27,6 +27,7 @@ dependencies:
   all_sensors: ^0.1.1
   jiffy: ^3.0.1
   vibration: ^1.2.4
+  screen: ^0.0.5
 
 
   # The following adds the Cupertino Icons font to your application.
