@@ -5,3 +5,7 @@ export 'location_state.dart';
 export 'point_bloc.dart';
 export 'point_event.dart';
 export 'point_state.dart';
+
+export 'proximity_bloc.dart';
+export 'proximity_event.dart';
+export 'proximity_state.dart';

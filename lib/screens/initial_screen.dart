@@ -17,10 +17,17 @@ class InitialScreen extends StatelessWidget {
         title: Text('Track Your Location'),
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.timeline),
-              onPressed: () {
-                Navigator.pushNamed(context, ChartScreen.ID);
-              })
+            icon: Icon(Icons.timeline),
+            onPressed: () {
+              Navigator.pushNamed(context, ChartScreen.ID);
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.pan_tool),
+            onPressed: () {
+              Navigator.pushNamed(context, ProximityScreen.ID);
+            },
+          ),
         ],
       ),
       body: SafeArea(

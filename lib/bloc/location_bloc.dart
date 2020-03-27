@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:meta/meta.dart';
 import 'package:bloc/bloc.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:trackerv2/services/locationService.dart';
+import 'package:trackerv2/services/services.dart';
 import './bloc.dart';
 
 class LocationBloc extends Bloc<LocationEvent, LocationState> {
