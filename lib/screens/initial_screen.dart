@@ -44,7 +44,9 @@ class InitialScreen extends StatelessWidget {
                     return ListView.builder(
                       itemCount: locationState.positions?.length,
                       itemBuilder: (BuildContext context, int index) {
-                        return _locationCard(locationState.positions[index]);
+                        return LocationListCard(
+                          position: locationState.positions[index],
+                        );
                       },
                     );
                   }
@@ -52,7 +54,9 @@ class InitialScreen extends StatelessWidget {
                     return ListView.builder(
                       itemCount: locationState.positions?.length,
                       itemBuilder: (BuildContext context, int index) {
-                        return _locationCard(locationState.positions[index]);
+                        return LocationListCard(
+                          position: locationState.positions[index],
+                        );
                       },
                     );
                   }
@@ -85,41 +89,5 @@ class InitialScreen extends StatelessWidget {
         speed: Duration(milliseconds: 150),
       ),
     );
-  }
-
-  Widget _locationCard(Position position) {
-    return Card(
-        margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Text(
-                'Lattitude: ${position.latitude}',
-                style: TextStyle(
-                  fontSize: 18.0,
-                  color: Colors.grey[600],
-                ),
-              ),
-              SizedBox(height: 6.0),
-              Text(
-                'Longitude: ${position.longitude}',
-                style: TextStyle(
-                  fontSize: 18.0,
-                  color: Colors.grey[600],
-                ),
-              ),
-              SizedBox(height: 6.0),
-              Text(
-                '${position.timestamp.toIso8601String()}',
-                style: TextStyle(
-                  fontSize: 14.0,
-                  color: Colors.grey[800],
-                ),
-              ),
-            ],
-          ),
-        ));
   }
 }
