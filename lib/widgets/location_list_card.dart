@@ -19,7 +19,6 @@ class LocationListCard extends StatelessWidget {
                 'Lattitude: ${position.latitude}',
                 style: TextStyle(
                   fontSize: 18.0,
-                  color: Colors.grey[600],
                 ),
               ),
               SizedBox(height: 6.0),
@@ -27,7 +26,6 @@ class LocationListCard extends StatelessWidget {
                 'Longitude: ${position.longitude}',
                 style: TextStyle(
                   fontSize: 18.0,
-                  color: Colors.grey[600],
                 ),
               ),
               SizedBox(height: 6.0),
@@ -35,7 +33,6 @@ class LocationListCard extends StatelessWidget {
                 '${Jiffy(position.timestamp).format("h:mm:ss a")}',
                 style: TextStyle(
                   fontSize: 14.0,
-                  color: Colors.grey[800],
                 ),
               ),
             ],

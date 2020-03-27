@@ -28,6 +28,15 @@ class InitialScreen extends StatelessWidget {
               Navigator.pushNamed(context, ProximityScreen.ID);
             },
           ),
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                SettingsScreen.ID,
+              );
+            },
+          ),
         ],
       ),
       body: SafeArea(

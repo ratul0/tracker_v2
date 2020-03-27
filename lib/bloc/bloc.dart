@@ -9,3 +9,7 @@ export 'point_state.dart';
 export 'proximity_bloc.dart';
 export 'proximity_event.dart';
 export 'proximity_state.dart';
+
+export 'theme_bloc.dart';
+export 'theme_event.dart';
+export 'theme_state.dart';

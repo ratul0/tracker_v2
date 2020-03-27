@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trackerv2/bloc/bloc.dart';
+import 'package:trackerv2/bloc/theme_bloc.dart';
 import 'package:trackerv2/screens/chart_screen.dart';
 import 'package:trackerv2/screens/screens.dart';
 import 'package:trackerv2/services/services.dart';
@@ -25,6 +26,9 @@ void main() {
         BlocProvider<ProximityBloc>(
           create: (context) => ProximityBloc(proximityService),
         ),
+        BlocProvider<ThemeBloc>(
+          create: (context) => ThemeBloc(),
+        ),
       ],
       child: LocationTrackerApp(),
     ),
@@ -34,14 +38,20 @@ void main() {
 class LocationTrackerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: "Location Tracker",
-        initialRoute: InitialScreen.ID,
-        routes: {
-          InitialScreen.ID: (_) => InitialScreen(),
-          ChartScreen.ID: (_) => ChartScreen(),
-          ProximityScreen.ID: (_) => ProximityScreen(),
-        });
+    return BlocBuilder<ThemeBloc, ThemeState>(
+      builder: (context, themeState) {
+        return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: "Location Tracker",
+            theme: themeState.theme,
+            initialRoute: InitialScreen.ID,
+            routes: {
+              InitialScreen.ID: (_) => InitialScreen(),
+              ChartScreen.ID: (_) => ChartScreen(),
+              ProximityScreen.ID: (_) => ProximityScreen(),
+              SettingsScreen.ID: (_) => SettingsScreen(),
+            });
+      },
+    );
   }
 }
