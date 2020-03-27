@@ -1,4 +1,4 @@
-import 'package:proximity_plugin/proximity_plugin.dart';
+import 'package:all_sensors/all_sensors.dart';
 
 class ProximityService {
   Stream<ProximityEvent> getProximityData() {

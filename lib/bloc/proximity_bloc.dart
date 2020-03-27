@@ -1,6 +1,6 @@
 import 'dart:async';
+import 'package:all_sensors/all_sensors.dart';
 import 'package:bloc/bloc.dart';
-import 'package:proximity_plugin/proximity_plugin.dart';
 import 'package:trackerv2/services/services.dart';
 import './bloc.dart';
 import 'package:vibration/vibration.dart';
@@ -12,7 +12,7 @@ class ProximityBloc extends Bloc<LocalProximityEvent, ProximityState> {
   ProximityBloc(this.proximityService) {
     proximitySubscription =
         proximityService.getProximityData().listen((ProximityEvent event) {
-      event.x == 'Yes' ? add(ObjectDetected()) : add(ObjectGone());
+      event.getValue() ? add(ObjectDetected()) : add(ObjectGone());
     });
   }
 
