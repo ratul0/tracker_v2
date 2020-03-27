@@ -83,7 +83,7 @@ class InitialScreen extends StatelessWidget {
       child: TypewriterAnimatedTextKit(
         text: ['Press Play Button To Start Tracking..'],
         textStyle: TextStyle(
-          fontSize: 20.0,
+          fontSize: 18.0,
         ),
         totalRepeatCount: 1000,
         speed: Duration(milliseconds: 150),
