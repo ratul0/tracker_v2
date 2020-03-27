@@ -3,7 +3,8 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:trackerv2/bloc/bloc.dart';
-import 'package:trackerv2/widgets/actions_widget.dart';
+import 'package:trackerv2/screens/screens.dart';
+import 'package:trackerv2/widgets/widgets.dart';
 
 class InitialScreen extends StatelessWidget {
   static const String ID = 'INITIAL';
@@ -14,6 +15,13 @@ class InitialScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Track Your Location'),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.timeline),
+              onPressed: () {
+                Navigator.pushNamed(context, ChartScreen.ID);
+              })
+        ],
       ),
       body: SafeArea(
         child: Stack(

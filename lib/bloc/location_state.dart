@@ -1,6 +1,6 @@
-import 'package:meta/meta.dart';
 import 'package:equatable/equatable.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:trackerv2/models/graph_point_model.dart';
 
 abstract class LocationState extends Equatable {
   const LocationState();
