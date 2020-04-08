@@ -30,7 +30,7 @@ class LocationListCard extends StatelessWidget {
               ),
               SizedBox(height: 6.0),
               Text(
-                '${Jiffy(position.timestamp.add(Duration(hours: 1))).Hms}',
+                '${Jiffy(position.timestamp.add(Duration(hours: 2))).Hms}',
                 style: TextStyle(
                   fontSize: 14.0,
                 ),
